@@ -8,7 +8,7 @@ function Profile(){
             className="profile-avatar"
           />
           <h1 className="profile-name">Maria Macedo</h1>
-          <p className="profile-bio">Desenvolvedor React JS</p>
+          <p className="profile-bio">Desenvolvedora React JS</p>
         </div>
     )
 }
