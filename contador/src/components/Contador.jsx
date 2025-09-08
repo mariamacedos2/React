@@ -1,18 +1,42 @@
+import { use, useState } from "react";
 import styles from "./Contador.module.css"
 
+
 export default function Contador(){
-  console.log(styles)
+  
+  //const estado = useState(0)
+  //let contador = estado[0]
+  //const setContador = estado[1]
+
+  const [contador, setContador] = useState(0);
+  
+
+  function incrementar(){
+    setContador(contador +1)
+  }
+
+  function decrementar(){
+    setContador(contador -1)
+  }
+
   return(
     <>
       <div className={styles.container}> 
         <h1>Contador</h1>
-        <div className={styles.contadorDisplay}>0</div>
+        <div className={styles.contadorDisplay}>{contador}</div>
         <div className={styles.botaoContainer}>
-          <button>-</button>
-          <button>+</button>
+          <button 
+          className={styles.botao}
+          onClick={decrementar}>-</button>
+
+          <button className={styles.botao}
+          onClick={incrementar}>+</button>
         </div>
-        <button> Reset</button>
+        <button className={styles.botao}> Reset</button>
       </div>
     </>
   )
 }
+
+//finalizar o botao Reset
+//incluir 
